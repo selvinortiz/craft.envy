@@ -7,7 +7,7 @@ Distributed environment configuration for [Craft](http://buildwithcraft.com) *by
 ---
 
 ## What are distributed environments?
-*Distributed environments* are those in which two or more people (**boys/girls/other**) from different disciplines (**designers/developers/other**) may be working on a single (**craft**) project on different platforms (**Win/Mac/Linux/Other**).
+*Distributed environments* are those in which two or more people (__boys/girls/other__) from different disciplines (__designers/developers/other__) may be working on a single (__craft__) project on different platforms (**Win/Mac/Linux/Other**).
 
 ## Who should use envy?
 If you do not need to make your craft install *distributed environment friendly* then you do not need **envy**, craft will be more than enough.
@@ -61,7 +61,7 @@ In other words, you can use `domain.dev` or `.dev` and Craft should match it pro
 #### `$myDbConfig`
 This is a one dimensional array of your `database` configuration.
 
-#### `$myGeneralConfig
+#### `$myGeneralConfig`
 This is a one dimensional array of your `general` configuration.
 
 ### `@public/index.php`
@@ -70,8 +70,11 @@ We simply import `env/env.php` to load **envy**
 ### `@env/env.php`
 We define all the logic to safely load your `env/myenv.php` and inject it into the global config array at runtime.
 
-### `@craft/config/(db|general).php`
-We simply wrap the global `(db|general)` config array within a utility function `(injectMyDbConfig|injectMyGeneralConfig)` defined @ `env/env.php`
+### `@craft/config/db.php`
+We simply wrap the global `db` config array within the `injectMyDbCofig()` utility function defined @ `env/env.php`
+
+### `@craft/config/general.php`
+We simply wrap the global `general` config array within the `injectMyGeneralCofig()` utility function defined @ `env/env.php`
 
 ---
 
@@ -80,6 +83,6 @@ We simply wrap the global `(db|general)` config array within a utility function 
 
 2. It might be easier to start using **envy** by downloading rather than cloning into your *craft install* as that can lead to submodule issues.
 
-3. If you get stuck, I would love to help you... just ping me!
+3. If you get stuck just ping track me down online, I'll be happy to help.
 
 4. If you have any questions or comments you can find me on **twitter** [@selvinortiz](http://twitter.com/selvinortiz)
