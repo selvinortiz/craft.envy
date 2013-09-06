@@ -46,6 +46,10 @@ Before getting started with **envy**, please make sure you understand how [multi
 
 2. You can move your `env` directory elsewhere or rename it as long as you update the `$envPath` @ `public/index.php`
 
+### Cloning & Downloading
+You can safely download the [master branch](https://github.com/selvinortiz/craft-envy/archive/master.zip)
+or if you prefer, you can checkout the [official releases](https://github.com/selvinortiz/craft-envy/tags)
+
 ---
 
 ## Documentation
