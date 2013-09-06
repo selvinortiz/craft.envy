@@ -7,7 +7,7 @@ Distributed environment configuration for [Craft](http://buildwithcraft.com) *by
 ---
 
 ## What are distributed environments?
-*Distributed environments* are those in which two or more people (__boys/girls/other__) from different disciplines (__designers/developers/other__) may be working on a single (__craft__) project on different platforms (**Win/Mac/Linux/Other**).
+*Distributed environments* are those in which two or more people (boys/girls/other) from different disciplines (designers/developers/other) may be working on a single (craft) project on different platforms (Win/Mac/Linux/Other).
 
 ## Who should use envy?
 If you do not need to make your craft install *distributed environment friendly* then you do not need **envy**, craft will be more than enough.
