@@ -5,7 +5,8 @@ return injectMyGeneralConfig(
 	array(
 
 		'*' => array(
-			'devMode'	=> false
+			'devMode'			=> false,
+			'siteRoutesSource' 	=> 'file'
 		)
 	)
 );

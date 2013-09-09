@@ -2,12 +2,12 @@
 Distributed environment configuration for [Craft](http://buildwithcraft.com) *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
 
 ## Description
-**Envy** gives you the tools necessary to adapt [multiple environment config](http://docs.buildwithcraft.com/diving-in/multi-environment-configs.html) to work beautifully in a *distributed environment*.
+**Envy** allows you to adapt [multiple environment config](http://docs.buildwithcraft.com/diving-in/multi-environment-configs.html) to work beautifully in a *distributed environment*.
 
 ---
 
 ## What are distributed environments?
-*Distributed environments* are those in which two or more people (boys/girls/other) from different disciplines (designers/developers/other) may be working on a single (craft) project on different platforms (Win/Mac/Linux/Other).
+By definition a *distributed (team) environment* has members located in different places with different skill sets and skill levels.
 
 ## Who should use envy?
 If you do not need to make your craft install *distributed environment friendly* then you do not need **envy**, craft will be more than enough.
@@ -83,10 +83,10 @@ We simply wrap the global `general` config array within the `injectMyGeneralCofi
 ---
 
 ## Final Thoughts
-1. If you are not using `git|mercurial` start right now!
+1. If you are not using `git` or another `vcs` start right now!
 
 2. It might be easier to start using **envy** by downloading rather than cloning into your *craft install* as that can lead to submodule issues.
 
-3. If you get stuck just ping track me down online, I'll be happy to help.
+3. If you get stuck just track me down online, I'll be happy to help.
 
 4. If you have any questions or comments you can find me on **twitter** [@selvinortiz](http://twitter.com/selvinortiz)

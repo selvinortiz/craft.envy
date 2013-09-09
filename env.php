@@ -6,7 +6,7 @@
  * @author		Selvin Ortiz <selvin@selv.in>
  * @package		Envy
  * @category	PHP, Craft, Env
- * @version		v0.8.0 Beta
+ * @version		v0.8.1 Beta
  */
 
 $myEnvFile = @"{$envPath}/myenv.php";
