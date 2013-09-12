@@ -6,7 +6,7 @@
  * @author		Selvin Ortiz <selvin@selv.in>
  * @package		Envy
  * @category	PHP, Craft, Env
- * @version		v0.8.0 Beta
+ * @version		v0.9.0
  */
 
 $envPath	= realpath( __DIR__.'/../env' );
@@ -19,7 +19,7 @@ if ( ! is_readable( $envFile ) ) {
 }
 
 if ( ! is_readable( $craftFile ) ) {
-	exit( '<pre>Please ensure that '.$envFile.' exists and it is readable!</pre>' );
+	exit( '<pre>Please ensure that '.$craftFile.' exists and it is readable!</pre>' );
 }
 
 require_once $envFile;

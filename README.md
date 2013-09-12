@@ -1,4 +1,4 @@
-## Envy 0.8.1
+## Envy 0.9.0
 Distributed environment configuration for [Craft](http://buildwithcraft.com) *by* [Selvin Ortiz](http://twitter.com/selvinortiz)
 
 ## Description

@@ -6,6 +6,7 @@ return injectMyGeneralConfig(
 
 		'*' => array(
 			'devMode'			=> false,
+			'cpTrigger'			=> 'admin',
 			'siteRoutesSource' 	=> 'file'
 		)
 	)

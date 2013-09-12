@@ -6,25 +6,15 @@
  * @author		Selvin Ortiz <selvin@selv.in>
  * @package		Envy
  * @category	PHP, Craft, Env
- * @version		v0.8.1 Beta
+ * @version		v0.9.0
  */
 
 $myEnvFile = @"{$envPath}/myenv.php";
 
-if ( ! file_exists( $myEnvFile ) ) {
-	if ( file_exists( @"{$envPath}/sample.myenv.php" ) ) {
-		$ttl = 'Rename Required';
-		$msg = 'Looks like your (sample.myenv.php) file needs to be renamed to: myenv.php';
-		exit( getHelpMessage( $msg, $ttl ) );
-	} else {
-		$ttl = 'File Missing';
-		$msg = 'Looks like (myenv.php) is nowhere to be found, you may have to read the docs again.';
-
-		exit( getHelpMessage( $msg, $ttl ) );
-	}
+if ( file_exists( $myEnvFile ) ) {
+	// myenv.php is only required locally
+	require_once $myEnvFile;
 }
-
-require_once "{$envPath}/myenv.php";
 
 function injectMyGeneralConfig( array $general=array() )
 {
@@ -109,20 +99,4 @@ function injectMyConfig( array $local, array $global )
 	}
 
 	return $global;
-}
-
-function getHelpMessage( $msg, $ttl='Envy Warning' )
-{
-	$source		= array();
-	$source[]	= '<html>';
-	$source[]	= '<head>';
-	$source[]	= '<title>Envy | '.$ttl.'</title>';
-	$source[]	= '</head>';
-	$source[]	= '<body>';
-	$source[]	= '<pre style="font-weight: bold; color: #d00;">'.strtoupper( $ttl ).'</pre>';
-	$source[]	= '<pre style="font-weight: bold; color: #666;">'.$msg.'</pre>';
-	$source[]	= '</body>';
-	$source[]	= '</html>';
-
-	return implode("\n", $source );
 }
