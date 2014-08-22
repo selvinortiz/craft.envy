@@ -1,10 +1,7 @@
 # envy
 # ----
 # The local config (db|general).example.php should be duplicated and renamed to (db|general).php
-# These new local files should then be ignored so that they do not get pushed back upstream
+# The new local files should then be ignored so that they do not get pushed back up to the repository
 # ----
 craft/config/local/db.php
 craft/config/local/general.php
-
-# dotfiles
-.DS_Store

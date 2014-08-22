@@ -1,23 +1,23 @@
 <?php
-/**
- * @see	craft/app/etc/config/defaults/db.php
- */
 
-$envyDbConfig = array(
-	// @global config
+/**
+ * Database configuration file
+ *
+ * @see	craft/app/etc/config/defaults.php
+ */
+$envyFile	= dirname(__FILE__).'/local/db.php';
+$dbConfig	= array(
 	'*'					=> array(
 		'server'		=> 'localhost',
 		'user'			=> 'root',
 		'password'		=> 'secret',
-		'database'		=> 'livedb',
 		'tablePrefix'	=> 'craft',
 	),
-	// @staging config
-	'dev.'				=> array(
+	'.com'				=> array(
 		'user'			=> 'root',
 		'password'		=> 'secret',
-		'database'		=> 'stagingdb',
+		'database'		=> 'livedb',
 	),
 );
 
-return array_merge($envyDbConfig, is_readable('local/db.php') ? include('local/db.php') : array());
+return array_merge($dbConfig, file_exists($envyFile) ? include($envyFile) : array());
