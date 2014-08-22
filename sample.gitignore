@@ -1,0 +1,7 @@
+# envy
+# ----
+# The local config (db|general).example.php should be duplicated and renamed to (db|general).php
+# The new local files should then be ignored so that they do not get pushed back up to the repository
+# ----
+craft/config/local/db.php
+craft/config/local/general.php
