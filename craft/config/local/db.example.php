@@ -1,9 +1,12 @@
 <?php
 
+/**
+ * DB configuration file, @see craft/app/etc/config/defaults/db.php
+ */
 return array(
-	'.dev'			=> array(
+	'craft.dev'		=> array(
 		'user'		=> 'root',
 		'password'	=> 'secret',
-		'database'	=> 'devdb',
+		'database'	=> 'database',
 	),
 );

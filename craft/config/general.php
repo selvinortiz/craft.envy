@@ -1,22 +1,24 @@
 <?php
 
 /**
- * General configuration file
+ * General configuration file, @see craft/app/etc/config/defaults/general.php
  *
- * @see	craft/app/etc/config/defaults/general.php
+ * 1. Defines base general configs for all (*) and for production (.com) environments
+ * 2. Fetches the file with general configs for the local environment
+ * 3. Merges base and local general configs or returns the base configs if nothing is found for local
  */
-$envyFile		= dirname(__FILE__).'/local/general.php';
-$envySecure		= isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS'] == 'on');
 $generalConfig	= array(
 	'*' => array(
 		'environmentVariables'	=> array(
-			'siteUrl'			=> $envySecure ? 'https://' : 'http://' . $_SERVER['SERVER_NAME'].'/',
-			'fileSystemPath'	=> dirname(__FILE__).'/../../public/',
+			'baseUrl'	=> '/',
+			'basePath'	=> '../../public/',
 		),
 	),
-	'.com'			=> array(
+	'.com'	=> array(
 		'devMode'	=> false,
 	),
 );
 
-return array_merge($generalConfig, file_exists($envyFile) ? include($envyFile) : array());
+$envyGeneralConfig = @include('local/general.php');
+
+return is_array($envyGeneralConfig) ? array_merge($generalConfig, $envyGeneralConfig) : $generalConfig;

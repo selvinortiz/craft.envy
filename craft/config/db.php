@@ -1,11 +1,12 @@
 <?php
 
 /**
- * Database configuration file
+ * DB configuration file, @see craft/app/etc/config/defaults/db.php
  *
- * @see	craft/app/etc/config/defaults.php
+ * 1. Defines base db configs for all (*) and for production (.com) environments
+ * 2. Fetches the file with db configs for the local environment
+ * 3. Merges base and local db configs or returns the base configs if nothing is found for local
  */
-$envyFile	= dirname(__FILE__).'/local/db.php';
 $dbConfig	= array(
 	'*'					=> array(
 		'server'		=> 'localhost',
@@ -20,4 +21,6 @@ $dbConfig	= array(
 	),
 );
 
-return array_merge($dbConfig, file_exists($envyFile) ? include($envyFile) : array());
+$envyDbConfig = @include('local/db.php');
+
+return is_array($envyDbConfig) ? array_merge($dbConfig, $envyDbConfig) : $dbConfig;
