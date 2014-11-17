@@ -10,14 +10,14 @@
 $dbConfig	= array(
 	'*'					=> array(
 		'server'		=> 'localhost',
-		'user'			=> 'root',
-		'password'		=> 'secret',
-		'tablePrefix'	=> 'craft',
+		'user'			=> '{user}',
+		'password'		=> '{password}',
+		'tablePrefix'	=> '{tablePrefix}',
 	),
 	'.com'				=> array(
-		'user'			=> 'root',
-		'password'		=> 'secret',
-		'database'		=> 'livedb',
+		'user'			=> '{liveUsername}',
+		'password'		=> '{livePassword}',
+		'database'		=> '{liveDatabase}',
 	),
 );
 

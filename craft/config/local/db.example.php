@@ -5,8 +5,8 @@
  */
 return array(
 	'.dev'		=> array(
-		'user'		=> 'root',
-		'password'	=> 'secret',
-		'database'	=> 'database',
+		'user'		=> '{localUsername}',
+		'password'	=> '{localPassword}',
+		'database'	=> '{localDatabase}',
 	),
 );
